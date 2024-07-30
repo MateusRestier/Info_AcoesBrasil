@@ -1,5 +1,5 @@
 # UTILIZANDO VERSAO CHROME 127
-# pip install selenium openpyxl
+# pip install selenium openpyxl'
 
 try:  # try/except tenta executar os comandos dentro de 'try' e caso de erro, executa o 'except'
     import os

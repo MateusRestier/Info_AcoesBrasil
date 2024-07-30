@@ -21,11 +21,9 @@ def configure_browser():  # define a função q vai ser usada pra configurar e i
         chrome_options.add_argument("--disable-gpu")  # Desabilita a aceleração de GPU, necessária em algumas versões do Windows
         chrome_options.add_argument("--window-size=1270,720")  # Define o tamanho da janela do navegador
         chrome_options.add_argument("--headless") # Inicia o navegador em modo headless
-        chrome_options.add_argument("--log-level=3") # Definindo o nível de log para suprimir mensagens indesejadas
-        
+        chrome_options.add_argument("--log-level=3") # Definindo o nível de log para suprimir mensagens indesejadas        
         # Caminho para o ChromeDriver
         chrome_driver_path = os.path.join(current_dir, 'chromedriver.exe')  # Define o caminho para o ChromeDriver, indicando que esta no diretorio atual, junto com o executavel do chromedriver
-
         # Inicializando o navegador
         service = Service(chrome_driver_path)  # Cria uma instância da classe Service usando o caminho do ChromeDriver. Isso é usado para iniciar e controlar a instância do ChromeDriver.
         driver = webdriver.Chrome(service=service, options=chrome_options)  # usando webdriver.Chrome, colocou toda a configuração do navegador em uma variável, e iniciou uma instancia do navegador
